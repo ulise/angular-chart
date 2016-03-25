@@ -35,6 +35,11 @@ angular
         controller: 'ChartCtrl',
         controllerAs: 'chart'
       })
+      .when('/donat', {
+        templateUrl: 'views/donat.html',
+        controller: 'DonatCtrl',
+        controllerAs: 'donat'
+      })
       .otherwise({
         redirectTo: '/'
       });
