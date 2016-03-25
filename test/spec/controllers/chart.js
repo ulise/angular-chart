@@ -17,7 +17,4 @@ describe('Controller: ChartcontrollerCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(ChartcontrollerCtrl.awesomeThings.length).toBe(3);
-  });
 });

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc function
  * @name angularChartApp.controller:ChartcontrollerCtrl
@@ -8,24 +6,56 @@
  * Controller of the angularChartApp
  */
 angular.module('angularChartApp')
-  .controller('ChartCtrl', function ($scope, $timeout) {
-    $scope.charttype = "Line";
 
-    $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
-    $scope.series = ['Series A', 'Series B'];
-    $scope.data = [
-      [65, 59, 80, 81, 56, 55, 40],
-      [28, 48, 40, 19, 86, 27, 90]
+  .controller('ChartCtrl', function ($scope) {
+    $scope.chartObject = {};
+
+    $scope.secondRow = [
+      {v: new Date(2314, 2, 16)},
+      {v: 13},
+      {v: 'Lalibertines'},
+      {v: 'They are very tall'},
+      {v: 25},
+      {v: 'Gallantors'},
+      {v: 'First Encounter'}
     ];
-    $scope.onClick = function (points, evt) {
-      console.log(points, evt);
-    };
 
-    // Simulate async data update
-    $timeout(function () {
-      $scope.data = [
-        [28, 48, 40, 19, 86, 27, 90],
-        [65, 59, 80, 81, 56, 55, 40]
-      ];
-    }, 3000);
+
+    $scope.chartObject.type = "AnnotationChart";
+
+    $scope.chartObject.data = {"cols": [
+      {id: "month", label: "Month", type: "date"},
+      {id: "kepler-data", label: "Kepler-22b mission", type: "number"},
+      {id: "kepler-annot", label: "Kepler-22b Annotation Title", type: "string"},
+      {id: "kepler-annot-body", label: "Kepler-22b Annotation Text", type: "string"},
+      {id: "desktop-data", label: "Gliese mission", type: "number"},
+      {id: "desktop-annot", label: "Gliese Annotation Title", type: "string"},
+      {id: "desktop-annot-body", label: "Gliese Annotaioon Text", type: "string"}
+    ], "rows": [
+      {c: [
+        {v: new Date(2314, 2, 15)},
+        {v: 19 },
+        {v: 'Lalibertines'},
+        {v: 'First encounter'},
+        {v: 7},
+        {v: undefined},
+        {v: undefined}
+      ]},
+      {c: $scope.secondRow},
+      {c: [
+        {v: new Date(2314, 2, 17)},
+        {v: 0},
+        {v: 'Lalibertines'},
+        {v: 'All crew lost'},
+        {v: 28},
+        {v: 'Gallantors'},
+        {v: 'Omniscience achieved'}
+
+      ]}
+    ]};
+
+    $scope.chartObject.options = {
+      displayAnnotations: true
+    };
   });
+
