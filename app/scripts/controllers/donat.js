@@ -8,10 +8,13 @@
  * Controller of the angularChartApp
  */
 angular.module('angularChartApp')
-  .controller('DonatCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('DonatCtrl', function ($scope) {
+
+
+    $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
+    $scope.data = [300, 500, 100];
+//    $scope.colors = [0xFDB45C, 0xFDB45C, 0x0];
+//    $scope.colors = ['red', 'green', 'transparent'];
+    $scope.options = {percentageInnerCutout: 90}
+
   });

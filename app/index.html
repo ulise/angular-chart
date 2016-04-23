@@ -35,13 +35,14 @@
               <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/chart">Chart</a></li>
               <li><a ng-href="#/donat">Donat</a></li>
+              <li><a ng-href="#/amchart">AmChart</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div id="viewCon" class="container" style="height:500px; width: 600px">
     <div ng-view=""></div>
     </div>
 
@@ -66,15 +67,23 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/Chart.js/Chart.js"></script>
     <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/amcharts/dist/amcharts/amcharts.js"></script>
+    <script src="bower_components/amcharts-angular/dist/amChartsDirective.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="bower_components/amcharts/dist/amcharts/serial.js"></script>
+    <script src="bower_components/amcharts/dist/amcharts/themes/black.js"></script>
+
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/chart.js"></script>
         <script src="scripts/controllers/donat.js"></script>
+        <script src="scripts/controllers/myamcharts.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>

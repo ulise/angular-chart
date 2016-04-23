@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'chart.js'
+    'chart.js',
+    'amChartsDirective'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -39,6 +40,11 @@ angular
         templateUrl: 'views/donat.html',
         controller: 'DonatCtrl',
         controllerAs: 'donat'
+      })
+      .when('/amchart', {
+        templateUrl: 'views/amchart.html',
+        controller: 'AmchartCtrl',
+        controllerAs: 'amchartCtrl'
       })
       .otherwise({
         redirectTo: '/'
