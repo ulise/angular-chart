@@ -15,14 +15,7 @@ angular.module('angularChartApp')
       'Karma'
     ];
 
-    this.firstAwesomeThing = function(){
-      return this.awesomeThings[0];
-    };
 
-    this.secondAwesomeThing = function(){
-      return this.awesomeThings[1];
-    };
 
-    
 
   }]);

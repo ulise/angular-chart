@@ -35,6 +35,13 @@ module.exports = function(config) {
       'bower_components/angular-chart.js/dist/angular-chart.js',
       'bower_components/amcharts/dist/amcharts/amcharts.js',
       'bower_components/amcharts-angular/dist/amChartsDirective.js',
+      'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'bower_components/Sortable/Sortable.js',
+      'bower_components/Sortable/ng-sortable.js',
+      'bower_components/Sortable/knockout-sortable.js',
+      'bower_components/Sortable/react-sortable-mixin.js',
+      'bower_components/angular-dashboard-framework/dist/angular-dashboard-framework.js',
+      'bower_components/adf-structures-base/dist/adf-structures-base.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

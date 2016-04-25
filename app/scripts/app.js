@@ -17,7 +17,10 @@ angular
     'ngSanitize',
     'ngTouch',
     'chart.js',
-    'amChartsDirective'
+    'amChartsDirective',
+    'adf',
+    'adf.structures.base',
+    'adf.widget.book'
   ])
   .config(function ($routeProvider) {
     $routeProvider
